@@ -47,14 +47,11 @@ for (int i = 0; i < voter_count; i++) {
     if (!vote(name)) {
         printf("Invalid vote!\n");
     }
-
 }
 
 //display winner
 print_winner();
-
 }
-
 //update vote totals given a new vote
 bool vote(string name) {
     for (int i = 0; i < candidate_count; i++)
@@ -66,7 +63,6 @@ bool vote(string name) {
     }
     return false;
 }
-
 //print the winner
 void print_winner(void) {
     int maxvotes = 0;
@@ -77,7 +73,6 @@ void print_winner(void) {
             maxvotes = candidates[i].votes;
         }
     }
-
     // Imprimir todos os candidatos com o máximo número de votos
     for (int i = 0; i < candidate_count; i++) {
         if (candidates[i].votes == maxvotes) {
